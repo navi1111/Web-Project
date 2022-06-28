@@ -5,7 +5,7 @@ const WelcomeText = (name) => {
     <div className='white f3'>
       {`Welcome ${name.name}!`}
     </div>
-    );
+  );
 }
 
 export default WelcomeText;

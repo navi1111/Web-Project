@@ -16,7 +16,7 @@ const app = new Clarifai.App({
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 75,
       density: {
         enable: true,
         value_area: 800
@@ -80,7 +80,7 @@ class App extends Component {
         Clarifai.FACE_DETECT_MODEL,
         this.state.input)
       .then(response => {
-        console.log('hi', response)
+        console.log('Odziv API-a: ', response)
         if (response) {
           this.displayFaceBox(this.calculateFaceLocation(response))
         }
@@ -90,7 +90,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({ isSignedIn: false, imageUrl:'' })
+      this.setState({ isSignedIn: false, imageUrl: '' })
     } else if (route === 'home') {
       this.setState({ isSignedIn: true })
     }
